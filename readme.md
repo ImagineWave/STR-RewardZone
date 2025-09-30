@@ -1,30 +1,35 @@
 # STR Reward Zone
 
-## Какие дает возможности?
-- Создавать админам "Зоны выдачи наград" и редактировать их поведение и содержимое награды
-- Игрок получает награду, если добрался до **зоны выдачи наград** 
+## What does it offer?
 
-## Как это работает?
+* Allows admins to create **Reward Zones** and configure their behavior and rewards
+* A player receives a reward once they reach the **Reward Zone**
+
+## How does it work?
 
 #### Admin
-1. Выделил регион, в котором будет **зона выдачи наград**
-2. Создал **зону выдачи наград**
-3. Настроил режим работы и кулдаун зоны (КД общее для всех / КД для конкретного игрока / Без КД вовсе)
-4. Настроил пул предметов (Например добавил уберМеч, суперКирку, мегаЛопату, и т.д.)
-5. Выбрал один из режимов выдачи предметов (Весь пул / Один случайный из пула / Некоторое количество из пула)
-6. Настроил "истощаемость" пула (кто-то забрал уберМеч - убермеч не получит никто другой)
-#### Player
-1. Добрался до **зоны выдачи наград** 
-2. Получил награду (в соответствии с настройками)
-3. Зона ушла на перезарядку / Игрок больше не сможет получить награду в этой зоне (в соответствии с настройками)
 
-## Как это можно использовать?
-- Награды за прохождение паркура
-- Секретные клады (которые не увидят читеры через X-Ray)
-- Создавать точки появления аптечек/оружия на пвп аренах
-- Решить проблему элитр на сервере
-- Создавать киты для игроков
-- Что либо еще, на ваше усмотрение (зависит от вашей фантазии)
+1. Selects a region that will become the **Reward Zone**
+2. Creates the **Reward Zone**
+3. Configures the zone’s mode and cooldown (global cooldown / per-player cooldown / no cooldown at all)
+4. Sets up the reward pool (e.g., adds UberSword, SuperPickaxe, MegaShovel, etc.)
+5. Chooses a reward distribution mode (entire pool / one random item from the pool / several items from the pool)
+6. Configures pool depletion (if someone takes the UberSword – no one else can get it)
+
+#### Player
+
+1. Reaches the **Reward Zone**
+2. Receives the reward (according to the settings)
+3. The zone goes on cooldown / or the player can no longer receive rewards in this zone (depending on the settings)
+
+## How can this be used?
+
+* Rewards for completing parkour
+* Hidden treasures (that cheaters cannot spot with X-Ray)
+* Spawn points for medkits/weapons on PvP arenas
+* Solving the elytra problem on the server
+* Creating kits for players
+* Anything else you can imagine (depends on your creativity)
 
 
 ##### Licensed under CC BY-NC-SA 4.0
