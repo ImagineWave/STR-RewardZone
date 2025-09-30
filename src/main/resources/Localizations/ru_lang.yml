@@ -1,0 +1,18 @@
+str:
+  reward:
+    crud:
+      noPermission: "У вас нет прав редактировать зоны выдачи наград!"
+      onlyPlayerUsage: "Эта команда только для использования игроком!"
+      region:
+        noSelectedRegion: "У вас нет выделенного региона"
+        howToClear: "Вы можеете очистить выделенный регион командой /rewardregion clear"
+        clearedRegion: "Выделение региона очищено"
+        setPosition1: "Первая точка установлена: "
+        setPosition2: "Вторая точка установлена: "
+    test:
+      testLocaleMessage: "Какое то там тестовое сообщение."
+
+    common:
+      rewardZone: "зона выдачи наград"
+      player: "игрок"
+      error: "В ходе выполнения команды произошла неизвестная ошибка!"
