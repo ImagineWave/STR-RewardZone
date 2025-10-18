@@ -26,6 +26,10 @@ public class RegionService {
         return selectedRegions.get(player);
     }
 
+    public Map<Player, Region> getAllSelectedRegions() {
+        return selectedRegions;
+    }
+
     public void setSelectedRegion(Player player, Region region) {
         selectedRegions.put(player, region);
     }

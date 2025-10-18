@@ -6,6 +6,9 @@ str:
       region:
         noSelectedRegion: "You don't have a selected region"
         howToClear: "You can clear selected region with /rewardregion clear"
+        howToUse: "/rrg pos1/pos2 for cuboid selection (with player position)"
+        howToUseExact: "/rrg pos1/pos2 <X> <Y> <Z> for exact pos selection"
+        howToUseFullCuboid: "/rrg pos1/pos2 <X> <Y> <Z> <X2> <Y2> <Z2> for full region selection"
         clearedRegion: "Successfully cleared region selection"
         setPosition1: "First position set at: "
         setPosition2: "Second position set at: "

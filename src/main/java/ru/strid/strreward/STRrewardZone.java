@@ -2,9 +2,11 @@ package ru.strid.strreward;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
 import ru.strid.strreward.commands.RegionSelectCommand;
 import ru.strid.strreward.commands.RewardCRUDCommand;
 import ru.strid.strreward.listeners.TestListener;
+import ru.strid.strreward.schedulers.RegionSelectionParticleShower;
 
 import java.io.File;
 import java.util.logging.Logger;
@@ -41,7 +43,9 @@ public class STRrewardZone extends JavaPlugin {
         getCommand("rewardzone").setExecutor(new RewardCRUDCommand());
         getCommand("rewardregion").setExecutor(new RegionSelectCommand());
 
-        Bukkit.getServer().getPluginManager().registerEvents(new TestListener(), this);
+        //Bukkit.getServer().getPluginManager().registerEvents(new TestListener(), this);
+
+        BukkitTask globalCheck = new RegionSelectionParticleShower().runTaskTimer(this, 0, 10L); //TODO
     }
 
     private void initLocalizations() {

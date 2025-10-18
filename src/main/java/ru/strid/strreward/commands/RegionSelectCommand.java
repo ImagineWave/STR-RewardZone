@@ -65,10 +65,14 @@ public class RegionSelectCommand implements CommandExecutor {
     private void showRgInfo(Player player) {
         if(regionService.getSelectedRegion(player)!=null){
             messageService.sendMessage(player, regionService.getSelectedRegion(player).toString());
+            return;
         } else {
-            messageService.sendMessage(player, MessageType.INFO, "str.reward.crud.region.noSelectedRegion");
+            messageService.sendMessage(player, MessageType.BAD, "str.reward.crud.region.noSelectedRegion");
         }
         messageService.sendMessage(player, MessageType.INFO, "str.reward.crud.region.howToClear");
+        messageService.sendMessage(player, MessageType.INFO, "str.reward.crud.region.howToUse");
+        messageService.sendMessage(player, MessageType.INFO, "str.reward.crud.region.howToUseExact");
+        messageService.sendMessage(player, MessageType.INFO, "str.reward.crud.region.howToUseFullCuboid");
     }
 
     private void clearRegion(Player player) {

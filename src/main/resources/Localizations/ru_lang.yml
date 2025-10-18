@@ -6,6 +6,9 @@ str:
       region:
         noSelectedRegion: "У вас нет выделенного региона"
         howToClear: "Вы можеете очистить выделенный регион командой /rewardregion clear"
+        howToUse: "/rrg pos1/pos2 для выделения крайних точек кубоида (по вашей позиции)"
+        howToUseExact: "/rrg pos1/pos2 <X> <Y> <Z> для выделения конкретной точки"
+        howToUseFullCuboid: "/rrg pos1/pos2 <X> <Y> <Z> <X2> <Y2> <Z2> полное выделение кубоида"
         clearedRegion: "Выделение региона очищено"
         setPosition1: "Первая точка установлена: "
         setPosition2: "Вторая точка установлена: "
