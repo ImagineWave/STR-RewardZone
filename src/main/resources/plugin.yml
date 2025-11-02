@@ -16,3 +16,8 @@ commands:
       - rewardrg
       - rrg
     permission: str.reward.crud
+  rewardload:
+    usage: /rewardload
+    aliases:
+      - rload
+    permission: str.reward.crud

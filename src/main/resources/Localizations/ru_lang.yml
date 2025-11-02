@@ -1,10 +1,18 @@
 str:
   reward:
+    info:
+      emptyRewardContent: "Награды в этой зоне закончились"
+      playerGotReward: "Вы получили награду!"
+      fullInventoryWarn: "Ваш инвентарь полон — некоторые предметы были выброшены рядом с вами!"
     crud:
       noPermission: "У вас нет прав редактировать зоны выдачи наград!"
       onlyPlayerUsage: "Эта команда только для использования игроком!"
+      successfullyCreatedRewardZone: "Зона выдачи наград создана!"
+      dataReloadSuccess: "Зоны выдачи наград успешно загружены"
+      dataReloadFailure: "Ошибка при загрузке зон выдачи наград!"
       region:
         noSelectedRegion: "У вас нет выделенного региона"
+        noSuchRewardZone: "Не существует зоны с названием: "
         howToClear: "Вы можеете очистить выделенный регион командой /rewardregion clear"
         howToUse: "/rrg pos1/pos2 для выделения крайних точек кубоида (по вашей позиции)"
         howToUseExact: "/rrg pos1/pos2 <X> <Y> <Z> для выделения конкретной точки"
@@ -14,7 +22,6 @@ str:
         setPosition2: "Вторая точка установлена: "
     test:
       testLocaleMessage: "Какое то там тестовое сообщение."
-
     common:
       rewardZone: "зона выдачи наград"
       player: "игрок"

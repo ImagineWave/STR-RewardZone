@@ -8,17 +8,20 @@ import org.bukkit.entity.Player;
 import ru.strid.strreward.STRrewardZone;
 import ru.strid.strreward.entities.BlockPosition;
 import ru.strid.strreward.entities.Region;
+import ru.strid.strreward.entities.RewardZone;
 import ru.strid.strreward.entities.impl.RegionImpl;
 import ru.strid.strreward.enums.MessageType;
 import ru.strid.strreward.services.MessageService;
 import ru.strid.strreward.services.RegionService;
+import ru.strid.strreward.services.RewardZoneService;
 
 import java.util.logging.Logger;
 
 public class RegionSelectCommand implements CommandExecutor {
 
-    private MessageService messageService = MessageService.getMessageService();
-    private RegionService regionService = RegionService.getInstance();
+    private final MessageService messageService = MessageService.getMessageService();
+    private final RegionService regionService = RegionService.getInstance();
+    private final RewardZoneService rewardZoneService = RewardZoneService.getInstance();
     private final Logger logger = STRrewardZone.getInstance().getLogger();
 
     @Override
@@ -42,6 +45,12 @@ public class RegionSelectCommand implements CommandExecutor {
             if(args.length == 1) {
                 if(args[0].equals("clear")){
                     clearRegion(player);
+                    return true;
+                }
+            }
+            if(args.length == 2) {
+                if(args[0].equals("select")){
+                    selectRegion(player, args[1]);
                     return true;
                 }
             }
@@ -135,5 +144,14 @@ public class RegionSelectCommand implements CommandExecutor {
         Region region = new RegionImpl(pos1, pos2);
         messageService.sendMessage(player, region.toString());
         regionService.setSelectedRegion(player, region);
+    }
+
+    private void selectRegion(Player player, String zoneName){
+       RewardZone selectedZone = rewardZoneService.getRewardZones().get(zoneName);
+       if(selectedZone == null){
+           messageService.sendMessage(player, "str.reward.crud.region.noSuchRewardZone", zoneName);
+           return;
+       }
+        regionService.setSelectedRegion(player, selectedZone.getRegion());
     }
 }

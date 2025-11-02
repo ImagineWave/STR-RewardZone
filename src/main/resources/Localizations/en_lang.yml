@@ -1,10 +1,18 @@
 str:
   reward:
+    info:
+      emptyRewardContent: "This reward zone has run out of rewards"
+      playerGotReward: "You’ve received a reward!"
+      fullInventoryWarn: "Your inventory is full! Some items were dropped nearby"
     crud:
       noPermission: "You dont have permission to modify reward zones!"
       onlyPlayerUsage: "Only for player usage!"
+      successfullyCreatedRewardZone: "Reward zone created!"
+      dataReloadSuccess: "Successfully reloaded reward zones from disk"
+      dataReloadFailure: "Failed to load reward zones!"
       region:
         noSelectedRegion: "You don't have a selected region"
+        noSuchRewardZone: "Zone with that name does not exist: "
         howToClear: "You can clear selected region with /rewardregion clear"
         howToUse: "/rrg pos1/pos2 for cuboid selection (with player position)"
         howToUseExact: "/rrg pos1/pos2 <X> <Y> <Z> for exact pos selection"
